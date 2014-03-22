@@ -12,7 +12,7 @@ Et par punkter til det daglige arbejde:
 
 - Når du går i gang med en ny feature, så lav en ny branch ud fra master.
 - Sørg for tit - helst hver dag - at merge master ind i din egen branch. Så holder du løbende din kode up-to-date og undgår store, uoverskuelige merge konflikter.
-- Når du er færdig med din feature, skal den merges ind i master. **Dette gøres via et [puhttps://help.github.com/articles/using-pull-requests)**. Så kan vi nemt hjælpe hinanden med at sikre kvaliteten af vores arbejde.
+- Når du er færdig med din feature, skal den merges ind i master. **Dette gøres via et [pull request](https://help.github.com/articles/using-pull-requests)**. Så kan vi nemt hjælpe hinanden med at sikre kvaliteten af vores arbejde.
 - Man må ikke merge et pull request før der er udført kvalitetskontrol. For hvert pull request skal gælde:
     - Koden overholder kodestandarden.
     - Koden kan bygges / kompileres.
