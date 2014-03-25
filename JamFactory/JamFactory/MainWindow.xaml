@@ -1,8 +1,22 @@
 ﻿<Window x:Class="JamFactory.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="JamFactory Pro" Height="350" Width="525">
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Optimization">
+                <UserControl x:Name="optimizationUserControl"/>
+            </TabItem>
+            <TabItem Header="Planning">
+                <UserControl x:Name="planningUserControl"/>
+            </TabItem>
+            <TabItem Header="Products">
+                <UserControl x:Name="productsUserControl"/>
+            </TabItem>
+            <TabItem Header="QualityControl">
+                <UserControl x:Name="qualityControlUserControl"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
