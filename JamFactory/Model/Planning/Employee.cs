@@ -14,4 +14,4 @@ namespace Model.Planning
         private Pay pay { get; set; }
 
     }
-}
+} 
