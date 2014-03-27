@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Optimization\Supplier.cs" />
     <Compile Include="Products\Container.cs" />
     <Compile Include="Products\Ingredient.cs" />
     <Compile Include="Products\Product.cs" />
@@ -50,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Optimization\" />
     <Folder Include="Planning\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
