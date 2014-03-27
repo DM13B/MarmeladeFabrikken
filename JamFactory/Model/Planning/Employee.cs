@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common.Interfaces;
 
 namespace Model.Planning
 {
-    class Employee
+    class Employee : IEmployee
     {
-        private int id { get; set; }
-        private string Name { get; set; }
-        private decimal hours { get; set; }
-        private Pay pay { get; set; }
-
+        public int id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public decimal HoursPrWeek { get; set; }
+        public decimal HourlyRate { get; set; }
     }
 } 

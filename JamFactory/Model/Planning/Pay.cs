@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Common.Interfaces;
 namespace Model.Planning
 {
-    class Pay
+    class Pay : IPay
     {
-        decimal totalHours { get; set; }
-        DateTime startDate { get; set; }
-        DateTime endTime { get; set; }
-        decimal eveneningHours { get; set; }
-        decimal weekendHours { get; set; }
-        decimal nightHours { get; set; }
-        decimal totalPay { get; set; }
-
+        public decimal totalHours { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endTime { get; set; }
+        public decimal eveneningHours { get; set; }
+        public decimal weekendHours { get; set; }
+        public decimal nightHours { get; set; }
+        public decimal totalPay { get; set; }
     }
 }

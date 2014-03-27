@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Common.Interfaces
 {
-    interface IEmployee
+    public interface IEmployee
     {
+        int id { get; set; }
+        string FirstName { get; set; }
+        string LastName { get; set; }
+        decimal HoursPrWeek { get; set; }
+        decimal HourlyRate { get; set; }
     }
 }
