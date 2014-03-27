@@ -40,11 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Optimization\Supplier.cs" />
+    <Compile Include="Products\Container.cs" />
+    <Compile Include="Products\Ingredient.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductType.cs" />
+    <Compile Include="Products\Quality.cs" />
+    <Compile Include="Products\RawGoods.cs" />
+    <Compile Include="Products\Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Planning\" />
-    <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>

@@ -39,12 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccessController.cs" />
+    <Compile Include="Products\Entities\ContainerEntity.cs" />
+    <Compile Include="Products\Entities\IngredientEntity.cs" />
+    <Compile Include="Products\Entities\ProductEntity.cs" />
+    <Compile Include="Products\Entities\ProductTypeEntity.cs" />
+    <Compile Include="Products\Entities\QualityEntity.cs" />
+    <Compile Include="Products\Entities\RawGoodsEntity.cs" />
+    <Compile Include="Products\Entities\RecipeEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Optimization\" />
     <Folder Include="Planning\" />
-    <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
