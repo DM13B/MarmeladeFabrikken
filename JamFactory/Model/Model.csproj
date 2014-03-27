@@ -44,7 +44,7 @@
   <ItemGroup>
     <Folder Include="Optimization\" />
     <Folder Include="Planning\" />
-    <Folder Include="Products\" />
+    <Folder Include="Products\Entities\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
