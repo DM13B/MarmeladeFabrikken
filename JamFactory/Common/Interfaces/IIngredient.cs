@@ -8,6 +8,7 @@ namespace Common.Interfaces
 {
     public interface IIngredient
     {
+        int Id { get; set; }
         string Amount { get; set; }
     }
 }
