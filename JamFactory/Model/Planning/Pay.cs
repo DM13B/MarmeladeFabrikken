@@ -15,5 +15,6 @@ namespace Model.Planning
         public decimal weekendHours { get; set; }
         public decimal nightHours { get; set; }
         public decimal totalPay { get; set; }
+        public int employeeID { get; set; }
     }
 }
