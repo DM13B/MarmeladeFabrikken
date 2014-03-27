@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IContainer.cs" />
+    <Compile Include="Interfaces\IIngredient.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
     <Compile Include="Interfaces\IProductType.cs" />
     <Compile Include="Interfaces\IQuality.cs" />
