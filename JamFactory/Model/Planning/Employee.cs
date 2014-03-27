@@ -7,7 +7,7 @@ using Common.Interfaces;
 
 namespace Model.Planning
 {
-    class Employee : IEmployee
+   public class Employee : IEmployee
     {
         public int id { get; set; }
         public string FirstName { get; set; }
