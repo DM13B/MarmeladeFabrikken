@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessController.cs" />
+    <Compile Include="Products\ContainerEntity.cs" />
     <Compile Include="Products\IngredientEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
