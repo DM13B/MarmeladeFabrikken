@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Controller.Optimization;
+
 namespace JamFactory.Optimization
 {
     /// <summary>
@@ -20,6 +22,8 @@ namespace JamFactory.Optimization
     /// </summary>
     public partial class CalculateUserControl : UserControl
     {
+        OptimizationController controller;
+
         public CalculateUserControl()
         {
             InitializeComponent();
@@ -27,11 +31,13 @@ namespace JamFactory.Optimization
                                                       "Produktion med største profit per kilo råvare",
                                                       "Produktion med største profit per glas",
                                                       "Produktion med største mulige produktion"};
+
+            controller = new OptimizationController();
         }
 
         private void calcButton_Click(object sender, RoutedEventArgs e)
         {
-            calcResultTextBox.Text = "Hulubulu lotte lotte hvor er du?";
+            calcResultTextBox.Text = controller.SuggestProduction();
         }
     }
 }
