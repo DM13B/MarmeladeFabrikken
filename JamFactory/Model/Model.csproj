@@ -46,6 +46,22 @@
   <ItemGroup>
     <Folder Include="Optimization\" />
     <Folder Include="Products\" />
+    <Compile Include="Optimization\DecisionBase.cs" />
+    <Compile Include="Optimization\Ingredient.cs" />
+    <Compile Include="Optimization\RawGoods.cs" />
+    <Compile Include="Optimization\ReceivedGoods.cs" />
+    <Compile Include="Optimization\Recipe.cs" />
+    <Compile Include="Products\Container.cs" />
+    <Compile Include="Products\Ingredient.cs" />
+    <Compile Include="Products\Product.cs" />
+    <Compile Include="Products\ProductType.cs" />
+    <Compile Include="Products\Quality.cs" />
+    <Compile Include="Products\RawGoods.cs" />
+    <Compile Include="Products\Recipe.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Planning\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
