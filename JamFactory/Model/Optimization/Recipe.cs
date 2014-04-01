@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Optimization
 {
-    class Recipe
+    public class Recipe
     {
         public List<Ingredient> Ingredients { get; private set; }
         public string Name { get; set; }

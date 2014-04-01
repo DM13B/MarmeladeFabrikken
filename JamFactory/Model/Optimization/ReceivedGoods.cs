@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Optimization
 {
-    class ReceivedGoods
+    public class ReceivedGoods
     {
         public RawGoods RawGoods { get; set; }
         public double Amount { get; set; }
