@@ -45,6 +45,10 @@ namespace Model.Optimization
 
         public string SuggestProduction()
         {
+            // UI calls Controller with algorithm, controller calls DecisionBase with algorithm, 
+            // DecisionBase instantiates SuggestionAlgorithm with recipes and receivedGoods, call
+            // suggest method with algorithm and asks for recipes, ordered by price, and amount.
+            // SuggestionAlgorithm returns list with Tuple<Recipe, decimal, double>, being recipe, price and amount
             string suggestion = "";
             List<Tuple<Recipe, decimal>> cheapestRecipes = orderRecipesByPrice();
 
