@@ -13,18 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JamFactory
+namespace JamFactory.Products
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for productsUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class productsUserControl : UserControl
     {
-        public MainWindow()
+        public productsUserControl()
         {
             InitializeComponent();
-            optimizationUserControl.Content = new Optimization.OptimizationUserControl();
-            productsUserControl.Content = new Products.productsUserControl();
+            productItemsUserControl.Content = new productItemsUserControl();
         }
     }
 }

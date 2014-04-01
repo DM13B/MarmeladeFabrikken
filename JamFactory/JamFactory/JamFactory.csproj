@@ -88,6 +88,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Products\productItemsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Products\productsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Optimization\calculateUserControl.xaml.cs">
@@ -101,6 +109,12 @@
     </Compile>
     <Compile Include="Optimization\suppliersUserControl.xaml.cs">
       <DependentUpon>suppliersUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\productItemsUserControl.xaml.cs">
+      <DependentUpon>productItemsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\productsUserControl.xaml.cs">
+      <DependentUpon>productsUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -130,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Planning\" />
-    <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>

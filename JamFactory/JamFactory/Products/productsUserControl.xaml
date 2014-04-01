@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="JamFactory.Products.productsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="870">
+    <Grid>
+        <StackPanel Margin="5">
+            <TabControl>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Products"></Label>
+                    </TabItem.Header>
+                    <UserControl x:Name="productItemsUserControl"/>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Containers"></Label>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Qualities"></Label>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Recipes"></Label>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Ingredients"></Label>
+                    </TabItem.Header>
+                </TabItem>
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Content="Raw Goods"></Label>
+                    </TabItem.Header>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Grid>
+</UserControl>
