@@ -11,5 +11,16 @@ namespace Model.Optimization
         public RawGoods RawGoods { get; set; }
         public double Amount { get; set; }
         public decimal Price { get; set; }
+
+        public ReceivedGoods()
+        {
+        }
+
+        public ReceivedGoods(RawGoods rawGoods, double amount, decimal price)
+        {
+            RawGoods = rawGoods;
+            Amount = amount;
+            Price = price;
+        }
     }
 }
