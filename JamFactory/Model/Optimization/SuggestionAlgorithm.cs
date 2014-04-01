@@ -17,6 +17,12 @@ namespace Model.Optimization
             this.recipes = recipes;
         }
 
+        /// <summary>
+        /// Returns a list of prices and possible production amounts for each recipe, calculated 
+        /// using specified algorithm
+        /// </summary>
+        /// <param name="algorithm">the name of an algorithm, currently only basic is available</param>
+        /// <returns>list of recipes, prices and amounts sorted by price</returns>
         public List<Tuple<Recipe, decimal, double>> CalculateProduction(string algorithm)
         {
             List<Tuple<Recipe, decimal, double>> calculatedProduction;
