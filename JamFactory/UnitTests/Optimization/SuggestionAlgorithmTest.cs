@@ -44,25 +44,57 @@ namespace UnitTests.Optimization
         [TestMethod]
         public void TestCalculateProdutionWithNull()
         {
-            List<Tuple<Recipe, decimal, double>> resultList = sA.CalculateProduction(null);
+            List<Tuple<Recipe, decimal, double>> actualResult = sA.CalculateProduction(null);
 
-            List<Tuple<Recipe, decimal, double>> tupleList = new List<Tuple<Recipe, decimal, double>>();
+            List<Tuple<Recipe, decimal, double>> expectedResult = new List<Tuple<Recipe, decimal, double>>();
 
-            CollectionAssert.AreEqual(tupleList, resultList);
+            CollectionAssert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-        public void TestCalculateProductionWithBasic()
+        public void TestCalculateProdutionWithUnkownAlgorithm()
+        {
+            List<Tuple<Recipe, decimal, double>> actualResult = sA.CalculateProduction("fister");
+
+            List<Tuple<Recipe, decimal, double>> expectedResult = new List<Tuple<Recipe, decimal, double>>();
+
+            CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void TestCalculateProductionPriceWithBasic()
         {
             List<Tuple<Recipe, decimal, double>> resultList = sA.CalculateProduction("basic");
 
-            string firstRecipeName = "Hyben/Æble Luksus";
-            decimal firstPrice = 5.85m;
-            string firstAmount = "1.100,83";
+            string expectedRecipeName = "Hyben/Æble Luksus";
+            decimal expectedRecipePrice = 5.85m;
 
-            Assert.AreEqual(firstRecipeName, resultList[0].Item1.Name);
-            Assert.AreEqual(firstPrice, resultList[0].Item2);
-            Assert.AreEqual(firstAmount,resultList[0].Item3.ToString("n2"));
+            string actualRecipeName = resultList[0].Item1.Name;
+            decimal actualRecipePrice = resultList[0].Item2;
+
+            Assert.AreEqual(expectedRecipeName, actualRecipeName);
+            Assert.AreEqual(expectedRecipePrice, actualRecipePrice);
+        }
+
+        [TestMethod]
+        public void TestCalculateProductionAmountWithBasic()
+        {
+            List<Tuple<Recipe, decimal, double>> resultList = sA.CalculateProduction("basic");
+
+            Tuple<Recipe, decimal, double> result = resultList[0];
+
+            foreach (Tuple<Recipe, decimal, double> recipeProduction in resultList)
+            {
+                if (recipeProduction.Item1.Name == "Hyben/Æble Luksus")
+                {
+                    result = recipeProduction;
+                }
+            }
+
+            string expectedAmount = "1.100,83";
+            string actualAmount = result.Item3.ToString("n2");
+
+            Assert.AreEqual(expectedAmount, actualAmount);
         }
 
 
