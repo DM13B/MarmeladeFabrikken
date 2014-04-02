@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Controller.Products;
 
 namespace JamFactory.Products
 {
@@ -20,9 +21,17 @@ namespace JamFactory.Products
     /// </summary>
     public partial class productItemsUserControl : UserControl
     {
+        private ProductController pc;
         public productItemsUserControl()
         {
             InitializeComponent();
+            pc = new ProductController();
+            LoadProducts();
+        }
+
+        public void LoadProducts()
+        {
+            dGrid.ItemsSource = pc.GetAllProducts();
         }
     }
 }

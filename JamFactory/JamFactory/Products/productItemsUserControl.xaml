@@ -6,17 +6,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="350" d:DesignWidth="850">
     <Grid>
-        <StackPanel Margin="0,0,601,0" Background="Gray">
-            <Button Content="Get All Products" BorderThickness="1,1,1,5" Height="55"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,1,0" Background="Gray" Width="170" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Content="Get All Products" BorderThickness="1,1,1,5" Height="55" x:Name="btnGetAllProducts"/>
             <Button Content="Find By ID" Height="55" BorderThickness="1,1,1,5"/>
             <Button Content="Create Product" Height="55" BorderThickness="1,1,1,5"/>
             <Button Content="Update Product" Height="55" BorderThickness="1,1,1,5"/>
             <Button Content="Delete Product" Height="55" BorderThickness="1"/>
 
         </StackPanel>
-        <StackPanel Margin="254,0,0,0">
-            <DataGrid Height="350" />
-
+        
+        <StackPanel Margin="0,0,0,0" Grid.ColumnSpan="2">
+            <DataGrid Height="350" x:Name="dGrid" Width="677" HorizontalAlignment="Right"/>
         </StackPanel>
     </Grid>
 </UserControl>
