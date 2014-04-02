@@ -28,7 +28,7 @@
         <Button x:Name="addSupplierButton" Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,328,0,0" VerticalAlignment="Top" Width="115" Height="26" Click="addSupplierButton_Click"/>
         <DockPanel Margin="322,10,10,10">
             <DockPanel Margin="0,0,0,35" DockPanel.Dock="Top">
-                <DataGrid x:Name="possibleGoodsDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False">
+                <DataGrid x:Name="possibleGoodsDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header = "Råvarer" Width="125" Binding="{Binding RawGoods.Name}"/>
                         <DataGridTextColumn Header = "Antal kg" Width="125" Binding="{Binding Amount}"/>
