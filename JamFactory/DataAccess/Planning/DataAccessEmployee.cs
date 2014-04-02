@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model.Planning;
 using Common.Interfaces;
 using System.Data.Sql;
 using System.Data.SqlClient;
-
 
 
 namespace DataAccess.Planning
 {
     class DataAccessEmployee
     {
-       
-        public const string connString = DataAccessController.CONNECTION_STRING;
+
+        public const string connString = DataAccessController.ConnectionString;
         SqlConnection conn = new SqlConnection(connString);
         
-        public void CreateEmployee(Employee employee)
+        public void SaveCreatedEmployee(Employee employee)
         {           conn.Open();
               try
               {
