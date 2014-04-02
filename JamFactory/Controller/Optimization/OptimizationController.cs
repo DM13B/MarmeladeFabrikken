@@ -11,8 +11,14 @@ namespace Controller.Optimization
 {
     public class OptimizationController
     {
-        List<ReceivedGoods> possibleReceivedGoods = new List<ReceivedGoods>();
-        //List<RawGoods> rawGoodsList;
+        List<ReceivedGoods> possibleReceivedGoods;
+        List<RawGoods> rawGoodsList;
+
+        public OptimizationController()
+        {
+            possibleReceivedGoods = new List<ReceivedGoods>();
+            rawGoodsList = SeedRawGoodsList();
+        }
 
         public string SuggestProduction()
         {
@@ -28,7 +34,28 @@ namespace Controller.Optimization
 
         public void AddPossibleReceivedGoods(string supplierName, string rawGoodsName, double amount, decimal price, DateTime received)
         {
-            RawGoods rawGoods = new RawGoods(rawGoodsName);
+            RawGoods rawGoods;
+            switch (rawGoodsName)
+            {
+                case "Hyben":
+                    rawGoods = rawGoodsList[0];
+                    break;
+                case "Æble":
+                    rawGoods = rawGoodsList[1];
+                    break;
+                case "Boysenbær":
+                    rawGoods = rawGoodsList[2];
+                    break;
+                case "Jordbær":
+                    rawGoods = rawGoodsList[3];
+                    break;
+                case "Solbær":
+                    rawGoods = rawGoodsList[4];
+                    break;
+                default:
+                    rawGoods = new RawGoods(rawGoodsName);
+                    break;
+            }
             ReceivedGoods receivedGoods = new ReceivedGoods(rawGoods, amount, price, received, supplierName);
             possibleReceivedGoods.Add(receivedGoods);
         }
@@ -46,6 +73,17 @@ namespace Controller.Optimization
         public void DeleteAllPossibleReceivedGoods()
         {
             possibleReceivedGoods.Clear();
+        }
+
+        public List<RawGoods> SeedRawGoodsList() // temporary
+        {
+            rawGoodsList = new List<RawGoods>();
+            rawGoodsList.Add(new RawGoods("Hyben"));
+            rawGoodsList.Add(new RawGoods("Æble"));
+            rawGoodsList.Add(new RawGoods("Boysenbær"));
+            rawGoodsList.Add(new RawGoods("Jordbær"));
+            rawGoodsList.Add(new RawGoods("Solbær"));
+            return rawGoodsList;
         }
     }
 }
