@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="850">
+             d:DesignHeight="400" d:DesignWidth="850">
     <Grid>
         <Label Content="Leverandør:" HorizontalAlignment="Left" Margin="16,17,0,0" VerticalAlignment="Top"/>
         <Label Content="Antal kg" HorizontalAlignment="Left" Margin="93,52,0,0" VerticalAlignment="Top" Width="90"/>
@@ -25,23 +25,26 @@
         <Label Content="Solbær" HorizontalAlignment="Left" Margin="18,242,0,0" VerticalAlignment="Top" Width="70"/>
         <TextBox x:Name="solbærKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="solbærPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <Button x:Name="addSupplierButton" Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,279,0,0" VerticalAlignment="Top" Width="115" Height="26" Click="addSupplierButton_Click"/>
+        <Button x:Name="addSupplierButton" Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,328,0,0" VerticalAlignment="Top" Width="115" Height="26" Click="addSupplierButton_Click"/>
         <DockPanel Margin="322,10,10,10">
             <DockPanel Margin="0,0,0,35" DockPanel.Dock="Top">
-                <DataGrid x:Name="supplierDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False">
+                <DataGrid x:Name="possibleGoodsDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header = "Råvarer" Width="125" Binding="{Binding Item2}"/>
-                        <DataGridTextColumn Header = "Antal kg" Width="125" Binding="{Binding Item3}"/>
-                        <DataGridTextColumn Header = "Pris/kg" Width="125" Binding="{Binding Item4}"/>
-                        <DataGridTextColumn Header = "Leverandør" Width="*" Binding="{Binding Item1}"/>
+                        <DataGridTextColumn Header = "Råvarer" Width="125" Binding="{Binding RawGoods.Name}"/>
+                        <DataGridTextColumn Header = "Antal kg" Width="125" Binding="{Binding Amount}"/>
+                        <DataGridTextColumn Header = "Pris/kg" Width="125" Binding="{Binding Price}"/>
+                        <DataGridTextColumn Header = "Leveringsdato" Width="125" Binding="{Binding Received, StringFormat=\{0:dd-MM-yyyy\}}"/>
+                        <DataGridTextColumn Header = "Leverandør" Width="*" Binding="{Binding Supplier}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>
         </DockPanel>
         <DockPanel Margin="0,0,10,10" HorizontalAlignment="Right" DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
-            <Button Content="Slet række" Width="90" Height="26"/>
-            <Button Content="Slet alt" Width="90" Height="26" Margin="20,0,0,0"/>
+            <Button x:Name="deleteRowButton" Content="Slet række" Width="90" Height="26" Click="deleteRowButton_Click"/>
+            <Button x:Name="deleteAllButton" Content="Slet alt" Width="90" Height="26" Margin="20,0,0,0" Click="deleteAllButton_Click"/>
         </DockPanel>
+        <DatePicker x:Name="receivedDatePicker" HorizontalAlignment="Left" Margin="118,281,0,0" VerticalAlignment="Top" Width="171"/>
+        <Label Content="Leveringsdato" HorizontalAlignment="Left" Margin="18,280,0,0" VerticalAlignment="Top" Width="95"/>
 
 
     </Grid>

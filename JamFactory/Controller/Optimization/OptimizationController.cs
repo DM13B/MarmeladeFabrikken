@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Model.Optimization;
+using Common.Interfaces;
 
 namespace Controller.Optimization
 {
     public class OptimizationController
     {
-        private List<Supplier> supplierList = new List<Supplier>();
+        List<ReceivedGoods> possibleReceivedGoods = new List<ReceivedGoods>();
+        //List<RawGoods> rawGoodsList;
+
         public string SuggestProduction()
         {
             string suggestion = "";
@@ -23,15 +26,26 @@ namespace Controller.Optimization
             return suggestion;
         }
 
-        public void AddSupplier(List<Tuple<string, string, double, decimal>> suppliers)
+        public void AddPossibleReceivedGoods(string supplierName, string rawGoodsName, double amount, decimal price, DateTime received)
         {
-            for (int i = 0; i < suppliers.Count; i++)
-			{
-                RawGoods rawGoods = new RawGoods(suppliers[i].Item2);
-                ReceivedGoods receivedGoods = new ReceivedGoods(rawGoods, suppliers[i].Item3, suppliers[i].Item4);
-                Supplier supplier = new Supplier(suppliers[i].Item1, receivedGoods);
-                supplierList.Add(supplier);
-			}
+            RawGoods rawGoods = new RawGoods(rawGoodsName);
+            ReceivedGoods receivedGoods = new ReceivedGoods(rawGoods, amount, price, received, supplierName);
+            possibleReceivedGoods.Add(receivedGoods);
+        }
+
+        public List<IReceivedGoods> LoadPossibleReceviedGoods()
+        {
+            return possibleReceivedGoods.Cast<IReceivedGoods>().ToList();
+        }
+
+        public void DeletePossibleReceivedGoods(IReceivedGoods receivedGoods)
+        {
+            possibleReceivedGoods.Remove((ReceivedGoods)receivedGoods);
+        }
+
+        public void DeleteAllPossibleReceivedGoods()
+        {
+            possibleReceivedGoods.Clear();
         }
     }
 }
