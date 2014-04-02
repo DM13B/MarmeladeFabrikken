@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessController.cs" />
+    <Compile Include="Products\ContainerDataAccess.cs" />
     <Compile Include="Products\Entities\ContainerEntity.cs" />
     <Compile Include="Products\Entities\IngredientEntity.cs" />
     <Compile Include="Products\Entities\ProductEntity.cs" />
