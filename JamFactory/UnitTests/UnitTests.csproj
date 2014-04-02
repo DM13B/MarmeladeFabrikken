@@ -51,7 +51,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Optimization\SuggestionAlgorithmTest.cs" />
-    <Compile Include="Optimization\SuggestionAlgorithm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
