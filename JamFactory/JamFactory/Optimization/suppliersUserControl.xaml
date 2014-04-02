@@ -11,19 +11,19 @@
         <Label Content="Pris/kg" HorizontalAlignment="Left" Margin="199,52,0,0" VerticalAlignment="Top" Width="90"/>
         <Label Content="Hyben" HorizontalAlignment="Left" Margin="18,83,0,0" VerticalAlignment="Top" Width="70"/>
         <TextBox x:Name="supplierNameTextBox" HorizontalAlignment="Left" Height="23" Margin="93,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <TextBox x:Name="hybenKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="rosehipKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="hybenPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Æble" HorizontalAlignment="Left" Margin="18,124,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="æbleKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="appleKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="æblePriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Boysenbær" HorizontalAlignment="Left" Margin="18,164,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="boysenbærKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="boysenberryKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="boysenbærPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Jordbær" HorizontalAlignment="Left" Margin="18,204,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="jordbærKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="strawberryKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="jordbærPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Solbær" HorizontalAlignment="Left" Margin="18,242,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox x:Name="solbærKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="blackcurrantKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="solbærPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Button x:Name="addSupplierButton" Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,328,0,0" VerticalAlignment="Top" Width="115" Height="26" Click="addSupplierButton_Click"/>
         <DockPanel Margin="322,10,10,10">

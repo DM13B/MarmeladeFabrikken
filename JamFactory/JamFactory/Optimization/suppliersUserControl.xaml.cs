@@ -39,23 +39,23 @@ namespace JamFactory.Optimization
                 double amount;
                 decimal price;
 
-                if (double.TryParse(hybenKgTextBox.Text, out amount) && decimal.TryParse(hybenPriceTextBox.Text, out price))
+                if (double.TryParse(rosehipKgTextBox.Text, out amount) && decimal.TryParse(hybenPriceTextBox.Text, out price))
                 {
                     oc.AddPossibleReceivedGoods(supplierNameTextBox.Text, "Hyben", amount, price, receivedDatePicker.SelectedDate.Value);
                 }
-                if (double.TryParse(æbleKgTextBox.Text, out amount) && decimal.TryParse(æblePriceTextBox.Text, out price))
+                if (double.TryParse(appleKgTextBox.Text, out amount) && decimal.TryParse(æblePriceTextBox.Text, out price))
                 {
                     oc.AddPossibleReceivedGoods(supplierNameTextBox.Text, "Æble", amount, price, receivedDatePicker.SelectedDate.Value);
                 }
-                if (double.TryParse(boysenbærKgTextBox.Text, out amount) && decimal.TryParse(boysenbærPriceTextBox.Text, out price))
+                if (double.TryParse(boysenberryKgTextBox.Text, out amount) && decimal.TryParse(boysenbærPriceTextBox.Text, out price))
                 {
                     oc.AddPossibleReceivedGoods(supplierNameTextBox.Text, "Boysenbær", amount, price, receivedDatePicker.SelectedDate.Value);
                 }
-                if (double.TryParse(jordbærKgTextBox.Text, out amount) && decimal.TryParse(jordbærPriceTextBox.Text, out price))
+                if (double.TryParse(strawberryKgTextBox.Text, out amount) && decimal.TryParse(jordbærPriceTextBox.Text, out price))
                 {
                     oc.AddPossibleReceivedGoods(supplierNameTextBox.Text, "Jordbær", amount, price, receivedDatePicker.SelectedDate.Value);
                 }
-                if (double.TryParse(solbærKgTextBox.Text, out amount) && decimal.TryParse(solbærPriceTextBox.Text, out price))
+                if (double.TryParse(blackcurrantKgTextBox.Text, out amount) && decimal.TryParse(solbærPriceTextBox.Text, out price))
                 {
                     oc.AddPossibleReceivedGoods(supplierNameTextBox.Text, "Solbær", amount, price, receivedDatePicker.SelectedDate.Value);
                 }
@@ -73,15 +73,15 @@ namespace JamFactory.Optimization
             possibleGoodsDataGrid.Items.Refresh();
             supplierNameTextBox.Text = "";
             receivedDatePicker.SelectedDate = null;
-            hybenKgTextBox.Text = "";
+            rosehipKgTextBox.Text = "";
             hybenPriceTextBox.Text = "";
-            æbleKgTextBox.Text = "";
+            appleKgTextBox.Text = "";
             æblePriceTextBox.Text = "";
-            boysenbærKgTextBox.Text = "";
+            boysenberryKgTextBox.Text = "";
             boysenbærPriceTextBox.Text = "";
-            jordbærKgTextBox.Text = "";
+            strawberryKgTextBox.Text = "";
             jordbærPriceTextBox.Text = "";
-            solbærKgTextBox.Text = "";
+            blackcurrantKgTextBox.Text = "";
             solbærPriceTextBox.Text = "";
         }
 
