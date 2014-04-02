@@ -8,11 +8,9 @@ namespace Model.Optimization
 {
     public class DecisionBase
     {
-        // Peter lavede til public for at kunne tilføje i listerne i UnitTest
-        // Skal nok ændres, når vi sletter SeedWithData
-        public List<RawGoods> rawGoods;
-        public List<ReceivedGoods> receivedGoods;
-        public List<Recipe> recipes;
+        List<RawGoods> rawGoods;
+        List<ReceivedGoods> receivedGoods;
+        List<Recipe> recipes;
 
         public DecisionBase()
         {
@@ -25,13 +23,23 @@ namespace Model.Optimization
         {
             rawGoods.Add(new RawGoods("Hyben"));
             rawGoods.Add(new RawGoods("Æble"));
+            rawGoods.Add(new RawGoods("Solbær"));
+            rawGoods.Add(new RawGoods("Sukker"));
 
             receivedGoods.Add(new ReceivedGoods { RawGoods = rawGoods[0], Amount = 300, Price = 10 });
             receivedGoods.Add(new ReceivedGoods { RawGoods = rawGoods[1], Amount = 600, Price = 2 });
+            receivedGoods.Add(new ReceivedGoods { RawGoods = rawGoods[2], Amount = 100, Price = 8 });
+            receivedGoods.Add(new ReceivedGoods { RawGoods = rawGoods[3], Amount = 100000, Price = 7 });
+
+            Recipe recipe1 = new Recipe("Solbær Luksus");
+            recipe1.Ingredients.Add(new Ingredient { RawGoods = rawGoods[2], Amount = 0.45 });
+            recipe1.Ingredients.Add(new Ingredient { RawGoods = rawGoods[3], Amount = 0.45 });
+            recipes.Add(recipe1);
 
             Recipe recipe2 = new Recipe("Hyben/Æble Luksus");
             recipe2.Ingredients.Add(new Ingredient { RawGoods = rawGoods[0], Amount = 0.225 });
             recipe2.Ingredients.Add(new Ingredient { RawGoods = rawGoods[1], Amount = 0.225 });
+            recipe2.Ingredients.Add(new Ingredient { RawGoods = rawGoods[3], Amount = 0.45 });
             recipes.Add(recipe2);
         }
 
