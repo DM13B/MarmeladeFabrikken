@@ -53,10 +53,17 @@
     <Compile Include="Products\RawGoods.cs" />
     <Compile Include="Products\Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityControl\Batch.cs" />
+    <Compile Include="QualityControl\Interface\IBatch.cs" />
+    <Compile Include="QualityControl\Interface\IProduct.cs" />
+    <Compile Include="QualityControl\Interface\IQualityControl.cs" />
+    <Compile Include="QualityControl\Interface\ITest.cs" />
+    <Compile Include="QualityControl\Product.cs" />
+    <Compile Include="QualityControl\QualityControl.cs" />
+    <Compile Include="QualityControl\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Planning\" />
-    <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

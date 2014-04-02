@@ -50,11 +50,15 @@
     <Compile Include="Products\Entities\RecipeEntity.cs" />
     <Compile Include="Products\ProductDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QualityControl\DataAccessBinary.cs" />
+    <Compile Include="QualityControl\Entity\BatchEntity.cs" />
+    <Compile Include="QualityControl\Entity\QualityControlEntity.cs" />
+    <Compile Include="QualityControl\Entity\TestEntity.cs" />
+    <Compile Include="QualityControl\Entity\ProductEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Optimization\" />
     <Folder Include="Planning\" />
-    <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
