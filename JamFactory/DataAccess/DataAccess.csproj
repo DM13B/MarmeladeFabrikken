@@ -49,17 +49,23 @@
     <Compile Include="Products\Entities\RawGoodsEntity.cs" />
     <Compile Include="Products\Entities\RecipeEntity.cs" />
     <Compile Include="Products\ProductDataAccess.cs" />
+    <Compile Include="Planning\DataAccessEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Optimization\" />
     <Folder Include="Planning\" />
+    <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{8b671014-8261-4a9a-ae20-bc2b160197bd}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2b85c27e-5975-4ae6-9b6c-7a4a7361d075}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
