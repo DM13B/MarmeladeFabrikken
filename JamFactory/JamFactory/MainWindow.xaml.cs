@@ -25,6 +25,7 @@ namespace JamFactory
             InitializeComponent();
             optimizationUserControl.Content = new Optimization.OptimizationUserControl();
             productsUserControl.Content = new Products.productsUserControl();
+            qualityControlUserControl.Content = new QualityControl.QualityControl();
         }
     }
 }

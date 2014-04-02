@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interface
+namespace Common.Interfaces
 {
-    public interface IBatch
+    public interface IProductionBatch
     {
         int BatchID { get; set; }
-        List<IQualityControl> QualityControls { get; set; }
+        List<IProductionQualityCheck> QualityControls { get; set; }
         DateTime FinishedTime { get; set; }
     }
 }

@@ -42,10 +42,14 @@
     <Compile Include="Interfaces\IContainer.cs" />
     <Compile Include="Interfaces\IIngredient.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IProductionBatch.cs" />
+    <Compile Include="Interfaces\IProductionProduct.cs" />
+    <Compile Include="Interfaces\IProductionQualityCheck.cs" />
     <Compile Include="Interfaces\IProductType.cs" />
     <Compile Include="Interfaces\IQuality.cs" />
     <Compile Include="Interfaces\IRawGoods.cs" />
     <Compile Include="Interfaces\IRecipe.cs" />
+    <Compile Include="Interfaces\ITest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

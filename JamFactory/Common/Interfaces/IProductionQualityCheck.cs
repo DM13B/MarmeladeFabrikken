@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interface
+namespace Common.Interfaces
 {
-    public interface IQualityControl
+    public interface IProductionQualityCheck
     {
          string ControlName { get; set; }
          string ControlDescription { get; set; }
          string ExpectedResult { get; set; }
-         List<ITest> Tests { get; set; }
         
          //Kontrollør
          string Controller { get; set; }

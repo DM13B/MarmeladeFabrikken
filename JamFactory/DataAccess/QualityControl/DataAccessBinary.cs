@@ -5,16 +5,18 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.QualityControl.Entity;
+
+using Common.Interfaces;
+
 
 
 namespace DataAccess.QualityControl
 {
-    class DataAccessBinary
+    public class DataAccessBinary
     {
-        private List<ProductEntity> ProductList;
+        private List<IProductionProduct> ProductList;
 
-        public List<ProductEntity> LoadShopItems()
+        public List<IProductionProduct> LoadProducts()
         {
            
             try
@@ -22,14 +24,14 @@ namespace DataAccess.QualityControl
                 using (FileStream fs = File.OpenRead("ProductList.jam"))
                 {
                     BinaryFormatter formatter = new BinaryFormatter();
-                    ProductList = formatter.Deserialize(fs) as List<ProductEntity>;
+                    ProductList = formatter.Deserialize(fs) as List<IProductionProduct>;
                 }
             }
             catch { }
             return ProductList;
         }
 
-        public void SaveShopItems(List<ProductEntity> items)
+        public void SaveProducts(List<IProductionProduct> items)
         {
             using (FileStream fs = File.Create("ProductList.jam", 2048, FileOptions.None))
             {
@@ -37,5 +39,12 @@ namespace DataAccess.QualityControl
                 formatter.Serialize(fs, items);
             }
         }
+
+        public void SaveNewProduct(IProductionProduct newProduct)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

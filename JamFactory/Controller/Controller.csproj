@@ -41,10 +41,7 @@
   <ItemGroup>
     <Compile Include="Optimization\OptimizationController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QualityControl\Interface\IBatch.cs" />
-    <Compile Include="QualityControl\Interface\IProduct.cs" />
-    <Compile Include="QualityControl\Interface\IQualityControl.cs" />
-    <Compile Include="QualityControl\Interface\ITest.cs" />
+    <Compile Include="QualityControl\QualityController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Planning\" />

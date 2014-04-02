@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Interface;
 
 
-namespace Model 
+namespace Model.QualityControl 
 {
     [Serializable]
     public class Test : ITest

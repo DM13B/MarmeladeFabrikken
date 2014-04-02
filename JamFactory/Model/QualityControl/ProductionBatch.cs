@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Interface;
+using Common.Interfaces;
 
-namespace Model
+namespace Model.QualityControl
 {
     [Serializable]
-    public class Batch : IBatch
+    public class ProductionBatch : IProductionBatch
     {
         public int BatchID { get; set; }
-        public List<IQualityControl> QualityControls { get; set; }
+        public List<IProductionQualityCheck> QualityControls { get; set; }
         public bool BatchDone { get; set; }
 
         public DateTime FinishedTime { get; set; }
-        public Batch(int BatchId, List<IQualityControl> qualityControls)
+
+        public ProductionBatch(int BatchId, List<IProductionQualityCheck> qualityControls)
         {
             BatchID = BatchId;
-            QualityControls = new List<IQualityControl>();
+            QualityControls = new List<IProductionQualityCheck>();
             QualityControls = qualityControls;
             BatchDone = false;
         }

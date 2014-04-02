@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess.QualityControl.Entity
 {
-    public class ProductEntity
+    public class ProductionProductEntity 
     {
          string ProductName { get; set; }
 
          List<BatchEntity> Batches { get; set; }
 
          List<QualityControlEntity> QualityControls { get; set; }
-
-
 
     }
 }
