@@ -17,7 +17,7 @@ namespace Controller.Optimization
 
             decisionBase.SeedWithData();
 
-            suggestion = decisionBase.SuggestProduction();
+            suggestion = decisionBase.SuggestProduction("basic");
 
             return suggestion;
         }

@@ -51,6 +51,7 @@
     <Compile Include="Optimization\RawGoods.cs" />
     <Compile Include="Optimization\ReceivedGoods.cs" />
     <Compile Include="Optimization\Recipe.cs" />
+    <Compile Include="Optimization\SuggestionAlgorithm.cs" />
     <Compile Include="Products\Container.cs" />
     <Compile Include="Products\Ingredient.cs" />
     <Compile Include="Products\Product.cs" />
