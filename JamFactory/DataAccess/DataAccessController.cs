@@ -8,6 +8,7 @@ namespace DataAccess
 {
     public abstract class DataAccessController
     {
+
         private const string CONNECTION_STRING = "Data Source=ealdb1.eal.local;Initial Catalog=EJL15_DB;Persist Security Info=True;User ID=ejl15_usr;Password=Baz1nga15";
 
         public static string ConnectionString

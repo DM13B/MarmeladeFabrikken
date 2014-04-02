@@ -39,6 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Planning\Employee.cs" />
+    <Compile Include="Planning\Pay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Optimization\" />
+    <Folder Include="Products\" />
     <Compile Include="Optimization\DecisionBase.cs" />
     <Compile Include="Optimization\Ingredient.cs" />
     <Compile Include="Optimization\RawGoods.cs" />
