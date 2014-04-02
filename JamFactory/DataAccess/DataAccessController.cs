@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    abstract class DataAccessController
+    public abstract class DataAccessController
     {
-        public const string CONNECTION_STRING = "Data Source=ealdb1.eal.local;Initial Catalog=EJL15_DB;Persist Security Info=True;User ID=ejl15_usr;Password=Baz1nga15";
+        private const string CONNECTION_STRING = "Data Source=ealdb1.eal.local;Initial Catalog=EJL15_DB;Persist Security Info=True;User ID=ejl15_usr;Password=Baz1nga15";
+
+        public static string ConnectionString
+        {
+            get { return CONNECTION_STRING; }
+        }
     }
 }

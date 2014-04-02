@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Interfaces
 {
-    interface IProductType
+    public interface IProductType
     {
         int Id { get; set; }
         string Type { get; set; }
