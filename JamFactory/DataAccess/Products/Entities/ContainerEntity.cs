@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Products.Entities
 {
-    class ContainerEntity
+    public class ContainerEntity
     {
         public int Id { get; set; }
         public int Quantity { get; set; }

@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Products\DataAccessAlex\ProductDataAccessUnitTest.cs" />
     <Compile Include="Products\DataAccess\ContainerDataAccessTest.cs" />
+    <Compile Include="Products\DataAccess\ContainerControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

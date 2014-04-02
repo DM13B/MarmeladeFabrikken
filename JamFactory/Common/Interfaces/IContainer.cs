@@ -8,7 +8,6 @@ namespace Common.Interfaces
 {
     public interface IContainer
     {
-        int Id { get; set; }
         int Quantity { get; set; }
     }
 }

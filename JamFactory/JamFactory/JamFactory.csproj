@@ -88,6 +88,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Products\ContainerItemsUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Products\ContainerWindows\FindContainerById.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Products\productItemsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +117,12 @@
     </Compile>
     <Compile Include="Optimization\suppliersUserControl.xaml.cs">
       <DependentUpon>suppliersUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ContainerItemsUserControl.xaml.cs">
+      <DependentUpon>ContainerItemsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ContainerWindows\FindContainerById.xaml.cs">
+      <DependentUpon>FindContainerById.xaml</DependentUpon>
     </Compile>
     <Compile Include="Products\productItemsUserControl.xaml.cs">
       <DependentUpon>productItemsUserControl.xaml</DependentUpon>

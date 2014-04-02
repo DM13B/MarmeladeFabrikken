@@ -18,6 +18,7 @@
                     <TabItem.Header>
                         <Label Content="Containers"></Label>
                     </TabItem.Header>
+                    <UserControl x:Name="ContainerItemsUserControl"/>
                 </TabItem>
                 <TabItem>
                     <TabItem.Header>

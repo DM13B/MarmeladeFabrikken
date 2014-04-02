@@ -24,6 +24,7 @@ namespace JamFactory.Products
         {
             InitializeComponent();
             productItemsUserControl.Content = new productItemsUserControl();
+            ContainerItemsUserControl.Content = new ContainerItemsUserControl();
         }
     }
 }
