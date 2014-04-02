@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using AutoMapper;
 using Common.Interfaces;
+using Controller.Products;
 using DataAccess.Products;
 using DataAccess.Products.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -12,25 +15,31 @@ namespace UnitTests.Products.DataAccessAlex
     [TestClass]
     public class ProductDataAccessUnitTest
     {
-        ProductDataAccess pda = new ProductDataAccess();
+        ProductController pc = new ProductController();
 
         [TestMethod]
         public void TestMethod1()
         {
-            List<Product> productList = new List<Product>();
-
-            IProduct product = new Product()
-            {
-                Description = "hejDescription",
-                Name = "hejNavn"
-            };
             
-            pda.CreateProduct(product);
+            IProduct product = pc.NewProduct();
+            List<IProduct> iProducts = pc.GetAllProducts();
+            
+            product.Name = "TestingIsSoFun";
+            product.Description = "DescriptionTest";
 
-            IProduct temp = pda.GetProductById(2);
+            pc.CreateProduct(product);
 
-            productList.Add(temp as Product);
-            Assert.AreEqual(2, productList[0].Id);
+            IProduct newProduct = pc.GetProductById(8);
+            
+
+            IProduct getNewProductAgain = pc.GetProductById(8);
+
+            Assert.AreEqual(newProduct.Id, getNewProductAgain.Id);
+            newProduct.Name = "This is now a changed name";
+            newProduct.Id = 2;
+            pc.UpdateProduct(newProduct);
+            pc.DeleteProduct(getNewProductAgain);
+
         }
     }
 }
