@@ -7,10 +7,11 @@
              d:DesignHeight="400" d:DesignWidth="850">
     <Grid>
         <Button x:Name="calcButton" Content="Beregn" HorizontalAlignment="Left" Margin="279,214,0,0" VerticalAlignment="Top" Width="101" Height="35" Click="calcButton_Click"/>
-        <TextBox x:Name="calcResultTextBox" Margin="422,44,10,10" TextWrapping="Wrap" IsReadOnly="True" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+        <TextBox x:Name="calcResultTextBox" Margin="422,44,10,50" TextWrapping="Wrap" IsReadOnly="True" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
         <ListBox x:Name="calcListBox" HorizontalAlignment="Left" Height="165" Margin="10,44,0,0" VerticalAlignment="Top" Width="370"/>
         <Label Content="Beregningsmetode" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="170" FontSize="14"/>
         <Label Content="Resultat" HorizontalAlignment="Left" Margin="422,10,0,0" VerticalAlignment="Top" Width="170" FontSize="14"/>
+        <Button x:Name="chooseButton" Content="Producer resultat" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="125" Height="35" Click="calcButton_Click"/>
 
     </Grid>
 </UserControl>
