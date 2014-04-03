@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Products.Entities
 {
-    class ReceivedGoodsEntity
+    public class ReceivedGoodsEntity
     {
-        public IRawGoods RawGoods { get; set; }
+        public RawGoodsEntity RawGoods { get; set; }
         public double Amount { get; set; }
         public decimal Price { get; set; }
         public DateTime Received { get; set; }

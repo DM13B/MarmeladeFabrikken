@@ -62,8 +62,6 @@ namespace JamFactory.Optimization
 
                 updateGUI();
             }
-
-            
         }
 
         private void updateGUI()

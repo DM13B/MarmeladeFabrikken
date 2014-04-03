@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Products.Entities
 {
-    class RawGoodsEntity
+    public class RawGoodsEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public RawGoodsEntity(string name)
+        {
+            Name = name;
+        }
     }
 }
