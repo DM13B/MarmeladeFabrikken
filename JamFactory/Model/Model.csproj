@@ -59,7 +59,6 @@
     <Compile Include="Products\Quality.cs" />
     <Compile Include="Products\RawGoods.cs" />
     <Compile Include="Products\Recipe.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Planning\" />
