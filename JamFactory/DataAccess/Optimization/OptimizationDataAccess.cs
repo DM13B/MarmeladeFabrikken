@@ -34,6 +34,7 @@ namespace DataAccess.Optimization
                             Price = (decimal)reader["Price"],
                             Received = (DateTime)reader["Received"],
                             Supplier = (string)reader["Supplier"],
+                            Id = (int)reader["Id"],
                         };
 
                         potentialGoods.Add(potentialGood);
@@ -54,6 +55,31 @@ namespace DataAccess.Optimization
                 cmd.Parameters.Add("@Received", SqlDbType.DateTime).Value = receivedGood.Received;
                 cmd.Parameters.Add("@Supplier", SqlDbType.NVarChar).Value = receivedGood.Supplier;
 
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.ExecuteNonQuery();
+            }
+            _conn.Close();
+        }
+
+        public void DeletePotentialGoods(ReceivedGoodsEntity receivedGood)
+        {
+            _conn.Open();
+            using (var cmd = new SqlCommand("PotentialGoodsDelete", _conn))
+            {
+                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = receivedGood.Id;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.ExecuteNonQuery();
+            }
+            _conn.Close();
+        }
+
+        public void DeleteAllPotentialGoods()
+        {
+            _conn.Open();
+            using (var cmd = new SqlCommand("PotentialGoodsDeleteAll", _conn))
+            {
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.ExecuteNonQuery();

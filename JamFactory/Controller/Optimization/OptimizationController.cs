@@ -78,12 +78,13 @@ namespace Controller.Optimization
 
         public void DeletePossibleReceivedGoods(IReceivedGoods receivedGoods)
         {
-            possibleReceivedGoods.Remove((ReceivedGoods)receivedGoods);
+            ReceivedGoodsEntity rge = Mapper.DynamicMap<ReceivedGoodsEntity>(receivedGoods);
+            oda.DeletePotentialGoods(rge);
         }
 
         public void DeleteAllPossibleReceivedGoods()
         {
-            possibleReceivedGoods.Clear();
+            oda.DeleteAllPotentialGoods();
         }
 
         public List<RawGoods> SeedRawGoodsList() // temporary

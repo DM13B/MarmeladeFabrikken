@@ -13,5 +13,6 @@ namespace Common.Interfaces
         decimal Price { get; set; }
         DateTime Received { get; set; }
         string Supplier { get; set; }
+        int Id { get; set; }
     }
 }

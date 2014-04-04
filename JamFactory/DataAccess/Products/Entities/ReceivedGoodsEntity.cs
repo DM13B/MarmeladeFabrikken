@@ -14,5 +14,6 @@ namespace DataAccess.Products.Entities
         public decimal Price { get; set; }
         public DateTime Received { get; set; }
         public string Supplier { get; set; }
+        public int Id { get; set; }
     }
 }
