@@ -4,12 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" Background="White">
-    <DockPanel x:Name="MainPanel" Height="313" Width="706">
+    <DockPanel x:Name="MainPanel">
         <TabControl>
             <TabItem x:Name="tabControl_Quality" Header="Quality" Margin="0">
-                <DockPanel x:Name="MainPanel1" Height="281" VerticalAlignment="Top" Margin="0">
+                <DockPanel x:Name="MainPanel1" VerticalAlignment="Top" Margin="0">
                     <DockPanel x:Name="TopPanel" LastChildFill="False" DockPanel.Dock="Top" Margin="0">
-                        <ComboBox Width="120" Height="20"/>
+                        <ComboBox x:Name="productionDropdownMenu" Width="120" Height="20"/>
                         <Button x:Name="NewProductButton" VerticalAlignment="Top" Margin="5" Width="85" Height="25" Content="New Product" Click="NewProductButton_Click"/>
                     </DockPanel>
                     <DockPanel x:Name="LeftPanel" LastChildFill="False" HorizontalAlignment="Left" Width="100" Margin="0" Background="#FFE4E4E4">

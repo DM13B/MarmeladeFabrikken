@@ -40,9 +40,24 @@ namespace DataAccess.QualityControl
             }
         }
 
-        public void SaveNewProduct(IProductionProduct newProduct)
+        public void AddNewProduct(IProductionProduct newProduct)
         {
-            throw new NotImplementedException();
+            using (FileStream fs = File.OpenRead("ProductList.jam"))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                ProductList = formatter.Deserialize(fs) as List<IProductionProduct>;
+            }
+            
+            ProductList.Add(newProduct);
+
+            using (FileStream fs = File.Create("ProductList.jam", 2048, FileOptions.None))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                formatter.Serialize(fs, ProductList);
+            }
+
+            ProductList = new List<IProductionProduct>();
+
         }
 
 

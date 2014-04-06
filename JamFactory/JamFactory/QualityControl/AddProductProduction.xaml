@@ -3,9 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Height="63" Width="184">
-    <DockPanel x:Name="MainPanel" LastChildFill="False" Background="#FFC7C7C7">
-        <TextBox x:Name="ProductionNameTextbox" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" HorizontalAlignment="Center" DockPanel.Dock="Top" Width="150" Margin="0,5,0,0"/>
-        <Button x:Name="ProductionAcceptButton" Content="Accept" Height="25" VerticalAlignment="Center" Width="75" DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="0,5,0,0" Cursor="Hand" Click="ProductionAcceptButton_Click"/>
+             mc:Ignorable="d">
+    <DockPanel x:Name="MainPanel" Margin="0">
+        <DockPanel x:Name="LeftPanel" LastChildFill="False" Background="#FFE4E4E4">
+            <ComboBox x:Name="ProductionProductComboMenu" Height="20" VerticalAlignment="Top" Width="150" DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="5"/>
+            <TextBox x:Name="ProductionNameTextbox" TextWrapping="Wrap" Text="Control Name" VerticalAlignment="Center" HorizontalAlignment="Center" DockPanel.Dock="Top" Width="150" Margin="5"/>
+            <TextBox x:Name="controlDescriptionTextbox" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="5" Width="150"/>
+            <Button x:Name="ProductionAcceptButton" Content="Accept" Height="25" VerticalAlignment="Center" Width="75" DockPanel.Dock="Bottom" HorizontalAlignment="Center" Margin="5" Cursor="Hand" Click="ProductionAcceptButton_Click"/>
+            <Button x:Name="AddQualityCheck" Content="Add" Height="25" VerticalAlignment="Center" Width="75" Click="AddQualityCheck_Click" DockPanel.Dock="Bottom" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="ResultTypeCombo" VerticalAlignment="Center" Width="150" HorizontalAlignment="Center" DockPanel.Dock="Top" SelectionChanged="ProductionTypeCombo_SelectionChanged"/>
+            <DockPanel x:Name="ResultPanel" Height="52" LastChildFill="False" VerticalAlignment="Top" Width="155" Margin="5"/>
+        </DockPanel>
+        <DockPanel x:Name="RightPanel" Background="#FFE0E0E0">
+            <ListView x:Name="controlListView" DockPanel.Dock="Top">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Path=ControlName}" />
+                        <GridViewColumn Width="100" Header="Description" DisplayMemberBinding="{Binding Path=ControlDescription}" />
+                        <GridViewColumn Width="100" Header="Result 1" DisplayMemberBinding="{Binding Path=ExpectedResult1}" />
+                        <GridViewColumn Width="100" Header="Result 2" DisplayMemberBinding="{Binding Path=ExpectedResult2}" />
+                        <GridViewColumn Width="100" Header="Result Bool" DisplayMemberBinding="{Binding Path=ExpectedBoolResult}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
     </DockPanel>
 </UserControl>

@@ -65,6 +65,15 @@
     <Compile Include="QualityControl\AddProductProduction.xaml.cs">
       <DependentUpon>AddProductProduction.xaml</DependentUpon>
     </Compile>
+    <Compile Include="QualityControl\Control Types\ControlTypeBool.xaml.cs">
+      <DependentUpon>ControlTypeBool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QualityControl\Control Types\ControlTypeOneInteger.xaml.cs">
+      <DependentUpon>ControlTypeOneInteger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QualityControl\Control Types\ControlTypeTwoInteger.xaml.cs">
+      <DependentUpon>ControlTypeTwoInteger.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QualityControl\QualityControl.xaml.cs">
       <DependentUpon>QualityControl.xaml</DependentUpon>
     </Compile>
@@ -105,6 +114,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QualityControl\AddProductProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QualityControl\Control Types\ControlTypeBool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QualityControl\Control Types\ControlTypeOneInteger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QualityControl\Control Types\ControlTypeTwoInteger.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

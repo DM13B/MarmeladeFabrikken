@@ -31,7 +31,15 @@ namespace JamFactory.QualityControl
         public QualityControl()
         {
             InitializeComponent();
+
+            tabControl_Create.Content = new AddProductWindow();
+
             productList = loadAllProductionItems();
+             foreach (IProductionProduct product in productList)
+             {
+                 productionDropdownMenu.Items.Add(product);
+             }
+             
         }
 
         private List<IProductionProduct> loadAllProductionItems()

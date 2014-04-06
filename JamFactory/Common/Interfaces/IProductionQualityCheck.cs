@@ -10,8 +10,15 @@ namespace Common.Interfaces
     {
          string ControlName { get; set; }
          string ControlDescription { get; set; }
-         string ExpectedResult { get; set; }
-        
+
+         string ExpectedResult1 { get; set; }
+         string ExpectedResult2 { get; set; }
+
+         bool ExpectedBoolResult { get; set; }
+         bool BoolResult { get; set; }
+
+         int ControlType { get; set; }
+
          //Kontrollør
          string Controller { get; set; }
          
