@@ -3,46 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Common.Interfaces;
 using System.Data.Sql;
 using System.Data.SqlClient;
-using System.Data.SqlDbType;
 using Model.Planning;
+using System.Data.Common;
 
 namespace DataAccess.Planning
 {
-    class DataAccessEmployee
+    public class DataAccessEmployee
     {
+            private string connectionstring;
+            private static SqlConnection conn;
+            static SqlCommand CommandEmployee;
 
-        public const string connString = DataAccessController.ConnectionString;
-        SqlConnection conn = new SqlConnection(connString);
+          public DataAccessEmployee() 
+          { 
+              connectionstring = DataAccessController.ConnectionString;
+              CommandEmployee = new SqlCommand("CmdEmployeeCreate");
+              conn = new SqlConnection(connectionstring);
+              CommandEmployee.Connection = conn;
+          }
+
         
-
-        public void SaveCreatedEmployee(Employee employee)
-        {           conn.Open();
+          public void SaveEmployee(Employee employee)
+          { 
+              
               try
-              {
-                       SqlCommand cmd = new SqlCommand("EmployeeCreate", conn); // insert command
-                              cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                              cmd.Parameters.Add("@theFirstName", System.Data.SqlDbType.VarChar).Value = employee.FirstName;
-                              cmd.Parameters.Add("@theLastName", System.Data.SqlDbType.VarChar).Value = employee.LastName;
-                              cmd.Parameters.Add("@theHoursPrWeek", System.Data.SqlDbType.Float).Value = (float)employee.HoursPrWeek;
-                              cmd.Parameters.Add("@theHourlyRate", System.Data.SqlDbType.Float).Value = (float)employee.HourlyRate;
-                      
-                              conn.Open();
-                              cmd.ExecuteNonQuery();     //Boom Shakalakalaka
-                      
-                              //@theFirstName varchar(100),
-                              //@theLastName  varchar(100),
-                              //@theHoursPrWeek float,
-                              //@theHourlyRate float
-                              }
-                              catch (Exception)
-              {
+              {  
                   
-                  throw;
+                  
+                  using (SqlConnection sqlconn = new SqlConnection(connectionstring))
+                  {
+
+                      using( SqlCommand cmd = new SqlCommand("EmployeeCreate",sqlconn))
+                      {
+                          cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                      cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                      cmd.Parameters.Add("@theFirstName", System.Data.SqlDbType.VarChar).Value = employee.FirstName;
+                      cmd.Parameters.Add("@theLastName", System.Data.SqlDbType.VarChar).Value = employee.LastName;
+                      cmd.Parameters.Add("@theHoursPrWeek", System.Data.SqlDbType.Float).Value = employee.HoursPrWeek;
+                      cmd.Parameters.Add("@theHourlyRate", System.Data.SqlDbType.Float).Value = employee.HourlyRate;
+
+                      sqlconn.Open();
+                      cmd.ExecuteNonQuery();
+                      sqlconn.Close();
+                      }
+                  }
+                  
               }
-       
-        }
+              catch (Exception ex)
+              {
+                  //Console Test
+                  Console.Write("EmployeeSaveDB threw an ex" + ex.ToString());
+              }
+         
+          }
+          
+          //test load  saved employee by id 
+          public void GetEmployee(Employee emp)
+          {
+              SqlCommand cmd = new SqlCommand("EmployeeCreate");
+              cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+          }
+          
+          
+                     
+
     }
 }

@@ -40,10 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Optimization\OptimizationController.cs" />
+    <Compile Include="Planning\EmployeeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Planning\" />
     <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>

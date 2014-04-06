@@ -44,8 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Optimization\" />
-    <Folder Include="Products\" />
     <Compile Include="Optimization\DecisionBase.cs" />
     <Compile Include="Optimization\Ingredient.cs" />
     <Compile Include="Optimization\RawGoods.cs" />
@@ -61,8 +59,7 @@
     <Compile Include="Products\Recipe.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Planning\" />
-    <Folder Include="QualityControl\" />
+    <Folder Include="Products\QualityControl\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

@@ -50,11 +50,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Planning\EmployeeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDataAccessEmployee.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Optimization\" />
-    <Folder Include="Planning\" />
     <Folder Include="Products\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>

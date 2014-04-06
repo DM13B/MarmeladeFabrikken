@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Common.Interfaces;
 
+
+
+
 namespace Model.Planning
 {
    public class Employee : IEmployee
@@ -14,5 +17,15 @@ namespace Model.Planning
         public string LastName { get; set; }
         public decimal HoursPrWeek { get; set; }
         public decimal HourlyRate { get; set; }
+
+        public Employee(string fname,string lName, decimal hrsPrWeek, decimal hrlyRate)
+        {
+            FirstName = fname;
+            LastName = lName;
+            HourlyRate = hrlyRate;
+            HoursPrWeek = hrsPrWeek;
+
+        }
+        public Employee() { }
     }
 } 

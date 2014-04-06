@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Interfaces;
+
+
 namespace Model.Planning
+
 {
     class Pay : IPay
     {
