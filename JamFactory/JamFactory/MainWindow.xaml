@@ -9,6 +9,8 @@
             </TabItem>
             <TabItem Header="Planning">
                 <UserControl x:Name="planningUserControl"/>
+              
+
             </TabItem>
             <TabItem Header="Products">
                 <UserControl x:Name="productsUserControl"/>

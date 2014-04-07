@@ -88,6 +88,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Planning\planningUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Products\productItemsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +113,9 @@
     </Compile>
     <Compile Include="Optimization\suppliersUserControl.xaml.cs">
       <DependentUpon>suppliersUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Planning\planningUserControl.xaml.cs">
+      <DependentUpon>planningUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Products\productItemsUserControl.xaml.cs">
       <DependentUpon>productItemsUserControl.xaml</DependentUpon>
@@ -143,7 +150,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Planning\" />
     <Folder Include="QualityControl\" />
   </ItemGroup>
   <ItemGroup>
