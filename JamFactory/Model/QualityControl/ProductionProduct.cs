@@ -62,11 +62,5 @@ namespace Model.QualityControl
             }
             return null;
         }
-
-        public override string ToString()
-        {
-            return ProductName;
-        }
-        
     }
 }

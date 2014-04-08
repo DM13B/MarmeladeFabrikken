@@ -62,8 +62,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="QualityControl\AddProductProduction.xaml.cs">
-      <DependentUpon>AddProductProduction.xaml</DependentUpon>
+    <Compile Include="QualityControl\AddQualityControl.xaml.cs">
+      <DependentUpon>AddQualityControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="QualityControl\Control Types\ControlTypeBool.xaml.cs">
       <DependentUpon>ControlTypeBool.xaml</DependentUpon>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="QualityControl\QualityControl.xaml.cs">
       <DependentUpon>QualityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QualityControl\AddProduction.xaml.cs">
+      <DependentUpon>AddProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QualityControl\QualityControlMainWindow.xaml.cs">
+      <DependentUpon>QualityControlMainWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -113,7 +119,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="QualityControl\AddProductProduction.xaml">
+    <Page Include="QualityControl\AddQualityControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +136,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="QualityControl\QualityControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QualityControl\AddProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QualityControl\QualityControlMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

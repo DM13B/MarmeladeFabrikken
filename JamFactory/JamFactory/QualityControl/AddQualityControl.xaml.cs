@@ -24,7 +24,7 @@ namespace JamFactory.QualityControl
     /// <summary>
     /// Interaction logic for AddProductWindow.xaml
     /// </summary>
-    public partial class AddProductWindow : UserControl
+    public partial class AddQualityControl : UserControl
     {
 
         QualityController QController = new QualityController();
@@ -37,7 +37,7 @@ namespace JamFactory.QualityControl
         ControlTypeTwoInteger twoInt = new ControlTypeTwoInteger();
 
 
-        public AddProductWindow()
+        public AddQualityControl()
         {
             InitializeComponent();
             InitMenus();                                   

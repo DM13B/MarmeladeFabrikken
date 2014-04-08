@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using JamFactory;
 using Controller.QualityControl;
 using Common.Interfaces;
+using JamFactory.QualityControl;
 
 namespace JamFactory.QualityControl
 {
@@ -32,7 +33,7 @@ namespace JamFactory.QualityControl
         {
             InitializeComponent();
 
-            tabControl_Create.Content = new AddProductWindow();
+            //tabControl_Create.Content = new AddProductWindow();
 
             productList = loadAllProductionItems();
              foreach (IProductionProduct product in productList)
@@ -41,7 +42,7 @@ namespace JamFactory.QualityControl
              }
              
         }
-
+        
         private List<IProductionProduct> loadAllProductionItems()
         {
             return qController.loadAllProductionItems();
@@ -49,9 +50,12 @@ namespace JamFactory.QualityControl
 
         private void NewProductButton_Click(object sender, RoutedEventArgs e)
         {
+            //tabControl_Quality.Content = new AddProduction();
+        }
 
-            AddProductWindow AddProduct = new AddProductWindow();
-            tabControl_Create.Content = AddProduct;
+        private void NewBatchButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Lav ny batch i valgt produktion (productionDropdownMenu)
         }
     }
 }

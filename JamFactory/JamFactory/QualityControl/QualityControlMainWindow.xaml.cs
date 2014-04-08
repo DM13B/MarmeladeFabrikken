@@ -13,19 +13,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JamFactory
+using JamFactory.QualityControl;
+
+namespace JamFactory.QualityControl
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for QualityControlMainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class QualityControlMainWindow : UserControl
     {
-        public MainWindow()
+        public QualityControlMainWindow()
         {
             InitializeComponent();
-            optimizationUserControl.Content = new Optimization.OptimizationUserControl();
-            productsUserControl.Content = new Products.productsUserControl();
-            qualityControlUserControl.Content = new QualityControl.QualityControlMainWindow();
+            InitTabs();
+        }
+
+        private void InitTabs()
+        {
+            QualityTab.Content = new QualityControl();
+            CreateControlTab.Content = new AddQualityControl();
         }
     }
 }
