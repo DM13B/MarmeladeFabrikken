@@ -4,44 +4,47 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="350" d:DesignWidth="850">
+             d:DesignHeight="400" d:DesignWidth="850">
     <Grid>
         <Label Content="Leverandør:" HorizontalAlignment="Left" Margin="16,17,0,0" VerticalAlignment="Top"/>
         <Label Content="Antal kg" HorizontalAlignment="Left" Margin="93,52,0,0" VerticalAlignment="Top" Width="90"/>
         <Label Content="Pris/kg" HorizontalAlignment="Left" Margin="199,52,0,0" VerticalAlignment="Top" Width="90"/>
         <Label Content="Hyben" HorizontalAlignment="Left" Margin="18,83,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="199,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="supplierNameTextBox" HorizontalAlignment="Left" Height="23" Margin="93,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+        <TextBox x:Name="rosehipKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="rosehipPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Æble" HorizontalAlignment="Left" Margin="18,124,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="199,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="appleKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="applePriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Boysenbær" HorizontalAlignment="Left" Margin="18,164,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="199,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="boysenberryKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="boysenberryPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Jordbær" HorizontalAlignment="Left" Margin="18,204,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="199,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="strawberryKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="strawberryPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
         <Label Content="Solbær" HorizontalAlignment="Left" Margin="18,242,0,0" VerticalAlignment="Top" Width="70"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="93,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="199,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
-        <Button Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,279,0,0" VerticalAlignment="Top" Width="115" Height="26"/>
+        <TextBox x:Name="blackcurrantKgTextBox" HorizontalAlignment="Left" Height="23" Margin="93,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="blackcurrantPriceTextBox" HorizontalAlignment="Left" Height="23" Margin="199,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="addSupplierButton" Content="Tilføj leverandør" HorizontalAlignment="Left" Margin="174,328,0,0" VerticalAlignment="Top" Width="115" Height="26" Click="addSupplierButton_Click"/>
         <DockPanel Margin="322,10,10,10">
             <DockPanel Margin="0,0,0,35" DockPanel.Dock="Top">
-                <DataGrid x:Name="supplierDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False">
+                <DataGrid x:Name="possibleGoodsDataGrid" Width="auto" Height="auto" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.CanContentScroll="True" RowHeaderWidth="0" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header = "Råvarer" Width="125"/>
-                        <DataGridTextColumn Header = "Antal kg" Width="125"/>
-                        <DataGridTextColumn Header = "Pris/kg" Width="125"/>
-                        <DataGridTextColumn Header = "Leverandør" Width="*"/>
+                        <DataGridTextColumn Header = "Råvarer" Width="125" Binding="{Binding RawGoods.Name}"/>
+                        <DataGridTextColumn Header = "Antal kg" Width="125" Binding="{Binding Amount}"/>
+                        <DataGridTextColumn Header = "Pris/kg" Width="125" Binding="{Binding Price}"/>
+                        <DataGridTextColumn Header = "Leveringsdato" Width="125" Binding="{Binding Received, StringFormat=\{0:dd-MM-yyyy\}}"/>
+                        <DataGridTextColumn Header = "Leverandør" Width="*" Binding="{Binding Supplier}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>
         </DockPanel>
         <DockPanel Margin="0,0,10,10" HorizontalAlignment="Right" DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
-            <Button Content="Slet række" Width="90" Height="26"/>
-            <Button Content="Slet alt" Width="90" Height="26" Margin="20,0,0,0"/>
+            <Button x:Name="deleteRowButton" Content="Slet række" Width="90" Height="26" Click="deleteRowButton_Click"/>
+            <Button x:Name="deleteAllButton" Content="Slet alt" Width="90" Height="26" Margin="20,0,0,0" Click="deleteAllButton_Click"/>
         </DockPanel>
+        <DatePicker x:Name="receivedDatePicker" HorizontalAlignment="Left" Margin="118,281,0,0" VerticalAlignment="Top" Width="171"/>
+        <Label Content="Leveringsdato" HorizontalAlignment="Left" Margin="18,280,0,0" VerticalAlignment="Top" Width="95"/>
 
 
     </Grid>

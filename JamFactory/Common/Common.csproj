@@ -47,6 +47,7 @@
     <Compile Include="Interfaces\IProductType.cs" />
     <Compile Include="Interfaces\IQuality.cs" />
     <Compile Include="Interfaces\IRawGoods.cs" />
+    <Compile Include="Interfaces\IReceivedGoods.cs" />
     <Compile Include="Interfaces\IRecipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
