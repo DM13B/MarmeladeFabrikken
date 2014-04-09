@@ -116,10 +116,13 @@ namespace JamFactory.QualityControl
             DetermineControlResultType(ResultTypeCombo.SelectedIndex);
         }
 
-
+        /// <summary>
+        /// Saves a control
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddQualityCheck_Click(object sender, RoutedEventArgs e)
         {
-            //Refactoreres 
             switch (ResultTypeCombo.SelectedIndex)
             {
                     // Index 0 : Boolean result
@@ -152,7 +155,15 @@ namespace JamFactory.QualityControl
             
             //Lav 3 methods i controlleren der hver saver hver sin type af kontrol (Boolean resultat, 1 integer resultat og 2 integer resultat)
 
-            
+            //like
+            // public void saveOneInt()
+            //{}
+
+            //public void saveTwoInt()
+            //{}
+
+            //public void saveBool()
+            //{}
 
 
 
