@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IEmployee.cs" />
+    <Compile Include="Interfaces\IPay.cs" />
     <Compile Include="Interfaces\IContainer.cs" />
     <Compile Include="Interfaces\IIngredient.cs" />
     <Compile Include="Interfaces\IProduct.cs" />
