@@ -18,6 +18,7 @@ using Controller.QualityControl;
 using Common.Interfaces;
 using JamFactory.QualityControl;
 
+
 namespace JamFactory.QualityControl
 {
     /// <summary>
@@ -50,7 +51,7 @@ namespace JamFactory.QualityControl
 
         private void NewProductButton_Click(object sender, RoutedEventArgs e)
         {
-            //tabControl_Quality.Content = new AddProduction();
+            this.Content = new AddProduction();
         }
 
         private void NewBatchButton_Click(object sender, RoutedEventArgs e)

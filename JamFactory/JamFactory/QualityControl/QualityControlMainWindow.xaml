@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <TabControl HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,-32">
+        <TabControl Margin="0,0,0,-32">
             <TabItem x:Name="QualityTab" Header="Quality Control">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
